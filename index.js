@@ -6,7 +6,7 @@ let bot = new plusBot(token, {polling : true});
 
 //repaet after me
 
-bot.onText(/\/echo (.+)/, function (msg, match) {
+bot.onText(/[ ,.]js[\s\S]/i, function (msg, match) {
     var fromId = msg.from.id;
     var resp = match[1];
     bot.sendMessage(fromId, resp);
