@@ -12,3 +12,9 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
     bot.sendMessage(fromId, resp);
 });
 
+bot.onText(/(.+)js(.+)/, function (msg) {
+    let fromId = msg.from.id;
+    let resp = 'Don`t tell me about JS, you, son of a bitch!';
+    bot.sendMessage(fromId, resp);
+});
+
