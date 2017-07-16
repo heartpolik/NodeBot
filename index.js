@@ -5,6 +5,9 @@ let token = '433991323:AAF7fBkNsOdVBajNeMymTfEsb53pAuFW4i0';
 let bot = new plusBot(token, {polling : true});
 
 //repaet after me
+bot.onText('\/start', function (msg) {
+    bot.sendMessage(msg.from.id, 'Hello!');
+});
 
 bot.onText( /[ ,.]js\b/i , function (msg, match) {
     var fromId = msg.from.id;
