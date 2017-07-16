@@ -1,0 +1,25 @@
+{
+  "name": "node_bot",
+  "version": "1.0.0",
+  "description": "simple telegram bot, based on NodeJs",
+  "main": "index.js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.27.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/heart_polik/cppbot.git"
+  },
+  "keywords": [
+    "telegram",
+    "node",
+    "bot"
+  ],
+  "author": "kpolik",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/heart_polik/cppbot#readme"
+}
