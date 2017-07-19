@@ -7,24 +7,22 @@ let bot = new plusBot(token, {polling : true});
 let js_answers =
     [
         'Don`t tell me about JS, you, son of a bitch!',
-        'let a = "foo"'
+        'let a = "foo";',
+        'Js always make me wanna say: Fuck this shit!, but i can never be sure, what this refets to!',
+        'Wet so serious?',
+        'Viw, wet?!'
     ];
 
-//repaet after me
-bot.onText('/\/start/', function (msg) {
+//repeat after me
+bot.onText( /\/start/ , function (msg) {
     bot.sendMessage(msg.from.id, 'Hello!');
 });
 
 bot.onText( /[ ,.]js\b/i , function (msg, match) {
-    var fromId = msg.from.id;
-    var index = math.floor(math.random(js_answers.length));
-    var resp = js_answers[index];
+    let fromId = msg.from.id;
+    let index = Math.floor(Math.random() * js_answers.length);
+    let resp = js_answers[index];
     bot.sendMessage(fromId, resp);
 });
 
-// bot.onText(/(.+)js(.+)/, function (msg) {
-//     let fromId = msg.from.id;
-//     let resp = '';
-//     bot.sendMessage(fromId, resp);
-// });
 
