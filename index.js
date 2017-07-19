@@ -15,15 +15,15 @@ let js_answers =
 
 //repeat after me
 bot.onText( /\/start/ , function (msg) {
-    var chatId = msg.chat.id;
+    let chatId = msg.chat.id;
     bot.sendMessage(chatId, 'Hello!');
 });
 
-bot.onText( /[ ,.]js\b/i , function (msg, match) {
-    let fromId = msg.from.id;
+bot.onText( /[ ,.]js\b/i , function (msg) {
+    let chatId = msg.chat.id;
     let index = Math.floor(Math.random() * js_answers.length);
     let resp = js_answers[index];
-    bot.sendMessage(chatId, fromId, resp);
+    bot.sendMessage(chatId, resp);
 });
 
 
