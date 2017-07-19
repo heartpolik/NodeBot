@@ -14,16 +14,20 @@ let js_answers =
     ];
 
 //repeat after me
-bot.onText( /\/start/ , function (msg) {
-    let chatId = msg.chat.id;
-    bot.sendMessage(chatId, 'Hello!');
-});
+while(1) {
 
-bot.onText( /[ ,.]js\b/i , function (msg) {
-    let chatId = msg.chat.id;
-    let index = Math.floor(Math.random() * js_answers.length);
-    let resp = js_answers[index];
-    bot.sendMessage(chatId, resp);
-});
+    bot.onText(/\/start/, function (msg) {
+        let chatId = msg.chat.id;
+        bot.sendMessage(chatId, 'Hello!');
+    });
+
+    bot.onText(/[ ,.]js\b/i, function (msg) {
+        let chatId = msg.chat.id;
+        let index = Math.floor(Math.random() * js_answers.length);
+        let resp = js_answers[index];
+        bot.sendMessage(chatId, resp);
+    });
+
+}
 
 
