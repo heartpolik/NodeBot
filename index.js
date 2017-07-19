@@ -14,7 +14,6 @@ let js_answers =
     ];
 
 //repeat after me
-while(1) {
 
     bot.onText(/\/start/, function (msg) {
         let chatId = msg.chat.id;
@@ -28,6 +27,5 @@ while(1) {
         bot.sendMessage(chatId, resp);
     });
 
-}
 
 
